@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nombre de la pagina en la pestaña del navegador -->
+    <title>Digital Solutions</title>
+
+    <!-- Elemento grafico ubicado en la pestaña del navegador -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/png">
+
+    <!-- Enlace con hoja CSS personalizada -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Script Instalacion de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Script Instalacion de iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--Script Instalacion de Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+    <style>
+        .carousel-section {
+            height: 500px;
+        }
+        @media (max-width: 768px) {
+            .carousel-section {
+                height: 390px; /* Altura reducida para móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Fijo -->
+    <a name="Inicio"></a>
+    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="img/logo.png" alt="Logo de Digital Solutions" width="236" height="35" alt=""></a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler"
+                style="border: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- <ul class="navbar-nav ms-auto"> -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Empresa">Empresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Consultoria_S">Consultoría de Software</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Apps">Apps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Apps_W">Aplicativos Web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    Script JS para cerrar menu de manera automatica
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbarToggler = document.getElementById('navbarToggler');
+            var navbarNav = document.getElementById('navbarNav');
+            var navLinks = navbarNav.querySelectorAll('.nav-link');
+
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <section class="my-4">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <section class="d-flex flex-column justify-content-center align-items-center text-bg-dark text-center carousel-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/ImgCarrusel_1.png'); background-size: cover; background-position: center;">
+                        <h1>Consultoría y Desarrollo de soluciones de TI para ti</h1>
+                        <p>Soluciones tecnológicas a tu alcance</p>
+                        <button class="btn btn-primary btn-lg mt-3">¡Quiero saber más!</button>
+                        <button class="btn btn-danger my-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-question-circle-fill"></i></button>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="d-flex flex-column justify-content-center align-items-center text-bg-dark text-center carousel-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/ImgCarrusel_2.png'); background-size: cover; background-position: center;">
+                        <h1>Software a tu medida</h1>
+                        <p>Soluciones tecnológicas a tu alcance</p>
+                        <button class="btn btn-light btn-lg mt-3">+ Info</button>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="d-flex flex-column justify-content-center align-items-center text-bg-dark text-center carousel-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/ImgCarrusel_4.png'); background-size: cover; background-position: center;">
+                        <h1>Desarrollo de Apps Moviles</h1>
+                        <p>Llevamos tus ideas a todas las plataformas</p>
+                        <button class="btn btn-success btn-lg mt-3">Saber más</button>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="d-flex flex-column justify-content-center align-items-center text-bg-dark text-center carousel-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/ImgCarrusel_5.png'); background-size: cover; background-position: center;">
+                        <h1>Desarrollo de Apps Web</h1>
+                        <p>Tu negocio en los más grandes motores de busqueda del mundo</p>
+                        <button class="btn btn-dark btn-lg mt-3">Saber más</button>
+                    </section>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="container d-flex justify-content-center align-items-center gap-3 my-3">
+        <h1 class="mb-0">Servicios</h1>
+        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-question-circle-fill"></i></button>
+    </section> 
+
+    <div class="container">
+        <section class="row content-row">
+            <section class="col-sm-4 text-center">
+                <img src="img/Inicio1.png" alt="" width="210px" height="210px">
+                <h3 class="m-3">Software a la medida</h3>
+                <p>Te brindamos soluciones que representen mejor la mejor relacion: Costo-Beneficio para tu empresa</p>
+                <button class="btn btn-primary btn-lg my-4">Ver más ></button>
+            </section>
+            <section class="col-sm-4 text-center">
+                <img src="img/Inicio3.png" alt="" width="210px" height="210px">
+                <h3 class="m-3">Desarrollo de Apps</h3>
+                <p>Construimos tus apps con el objetivo incrementar tu modelo de negocios y mejorar tus procesos</p>
+                <button class="btn btn-primary btn-lg my-4">Ver más ></button>
+            </section>
+            <section class="col-sm-4 text-center">
+                <img src="img/Inicio2.png" alt="" width="210px" height="210px">
+                <h3 class="m-3">Desarrollo Web</h3>
+                <p>Diseñamos tus sitios web de manera actractiva e intuitiva para tus clientes siguiendo estandares de calidad</p>
+                <button class="btn btn-primary btn-lg my-4">Ver más ></button>
+            </section>
+        </section>
+    </div>
+
+    <div class="container-fluid text-white py-5" style="background: linear-gradient(135deg, #4b367c 0%, #3e88a5 50%, #6ab7c9 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <section class="col-md-8 order-2 order-md-1">
+                    <h3 class="text-center mb-2">¿Quienes somos?</h3>
+                    <p>
+                        Somos una empresa con 7 años de experiencia en el diseño y desarrollo de aplicaciones móviles y aplicativos web.
+                        Realizamos aplicaciones que faciliten al cliente el desarrollo de sus actividades diarias haciéndolas más
+                        intuitivas
+                        y de fácil manejo, incrementando los niveles de producción de cada uno de sus negocios.
+                    </p>
+                    <p>
+                        Digital Solutions es una empresa dedicada al desarrollo de software a la medida para medianas y grandes
+                        Empresas.
+                        Somos especialistas en Desarrollo sobre plataformas Microsoft como son: .NET, ASP.NET C#, MVC, así como también
+                        manejo de bases de datos corporativas como SQL Server.
+                    </p>
+                    <button class="btn btn-info btn-lg mt-3">Contactanos</button>
+                </section>
+                <section class="col-md-4 text-center order-1 order-md-2 mb-3 mb-md-0">
+                    <img src="img/information-technology.png" alt="" class="img-fluid" width="210px">
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center my-4">
+        <section class="container d-flex justify-content-center align-items-center gap-3 my-3">
+            <h3>¿Cómo Trabajamos?</h3>
+            <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3"><i
+                    class="bi bi-question-circle-fill"></i></button>
+        </section>
+        <section>
+            <p>Nuestros servicios se basa en 3 aspectos fundamentales</p>
+        </section>
+    </div>
+
+    <div class="container py-5">
+        <ul class="nav nav-pills justify-content-center mb-5 custom-nav" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="diag-tab" data-bs-toggle="tab" data-bs-target="#diagnostico" type="button"
+                    role="tab">
+                    <i class="bi bi-arrow-repeat me-2"></i> Diagnóstico
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="diseno-tab" data-bs-toggle="tab" data-bs-target="#diseno" type="button"
+                    role="tab">
+                    <i class="bi bi-laptop me-2"></i> Diseño
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="desarrollo-tab" data-bs-toggle="tab" data-bs-target="#desarrollo"
+                    type="button" role="tab">
+                    <i class="bi bi-cpu me-2"></i> Desarrollo
+                </button>
+            </li>
+        </ul>
+    
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="diagnostico" role="tabpanel">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/diagnostico.jpg" class="img-fluid rounded shadow" alt="Diagnóstico">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="display-6">Escuchamos tus necesidades</h2>
+                        <p class="text-muted">Nuestros expertos te orientaran en la busqueda de la mejor solucion para tu negocio y tu presupuesto</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tab-pane fade" id="diseno" role="tabpanel">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/desing.jpg" class="img-fluid rounded shadow" alt="Diseño">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="display-6">Diseño creativo e intuitivo</h2>
+                        <p class="text-muted">Creamos interfaces intuitivas y modernas para ti</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tab-pane fade show active" id="desarrollo" role="tabpanel">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/development.jpg" class="img-fluid rounded shadow" alt="Desarrollo">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="display-6 text-secondary">Software a tu medida</h2>
+                        <p class="text-muted">Desarrollamos las aplicaciones para se se adapten a tu modelo y no tengas que adaptarte a ellas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="stats-section" style="background-image: url('img/laptop-2620118_1280.jpg');">
+        <div class="overlay py-5">
+            <div class="container">
+                <div class="row text-white align-items-center">
+    
+                    <div class="col-md-4 d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/checklist.png" class="me-3" width="60" alt="Mundo">
+                        <div>
+                            <h2 class="fw-bold m-0">+5</h2>
+                            <p class="m-0">Años de experiencia</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/checklist.png" class="me-3" width="60" alt="Usuarios">
+                        <div>
+                            <h2 class="fw-bold m-0">+24,000</h2>
+                            <p class="m-0">Usuarios</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/checklist.png" class="me-3" width="60" alt="Código">
+                        <div>
+                            <h2 class="fw-bold m-0">+49,000</h2>
+                            <p class="m-0">Líneas de código</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container text-center my-4">
+        <section>
+            <button class="btn btn-info btn-lg mt-3">Solicita una Cotización</button> <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal4"><i
+                    class="bi bi-question-circle-fill"></i></button>
+        </section>
+    </div>
+
+    <footer>
+        <a name="Contacto"></a>
+        <div class="container-fluid p-5 text-center mt-5" style="background-color: #51a8b5;">
+            <div class="row g-0">
+                <div class="col-md-7 mb-4">
+                    <nav class="nav flex-column">
+                        <h4>Contacto</h4>
+                        <a class="nav-link text-dark" href="tel:+52663450">
+                            <i class="bi bi-telephone-fill"></i> Tel: 52 66 34 50
+                        </a>
+                        <h4>Ubicación</h4>
+                        <a class="nav-link text-dark" href="https://maps.app.goo.gl/VQ4X1T4tRi3zMAfv8"
+                            target="_blank">
+                            📍Av. Paseo de la Reforma 199, Col. Renacimiento, CP. 06500, Alcaldía Cuauhtémoc, CDMX
+                        </a>
+                    </nav>
+                </div>
+                <div class="col-md-4">
+                    <h3>Digital Solutions</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid text-center py-4" style="background-color: #dbe4e6;">
+        <section>
+            <p class="text-secondary mb-0">Desarrollado por: <span class="text-primary fw-bold">Néstor J Zamora</span></p>
+        </section>
+    </div>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modificacion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Cambio/Añadido</h5>
+                    <ul>
+                        <li>Eliminar Menu Hamburguesa en version de Escritorio</li>
+                        <li>Cambiar tema offcanva (Menu desplegable)</li>
+                        <li>Eliminar Slide sin contenido</li>
+                        <li>Opacar imagenes en vez de transparentar</li>
+                    </ul>
+                    <h5>Adicional</h5>
+                    <ul>
+                        <li>Comprar paquete de imagenes/ tomar fotografias oficina, identidad</li>
+                        <li>Comprimir imagenes para no comprometer velocidade de carga</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modificacion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Cambio/Añadido</h5>
+                    <ul>
+                        <li>Eliminar la repetecion del nombre de la empresa</li>
+                        <li>Orientar el mensaje al cliente</li>
+                        <li>Optimizar contenido para mejorar el SEO</li>
+                        <li>Eliminar efecto Hover de las imagenes de los servicios</li>
+                    </ul>
+                    <h5>Adicional</h5>
+                    <ul>
+                        <li>Imganes con los colores corporativos</li>
+                        <li>Comprimir imagenes para no comprometer velocidade de carga</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modificacion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Cambio/Añadido</h5>
+                    <ul>
+                        <li>Orientar el mensaje al cliente</li>
+                        <li>Optimizar contenido para mejorar el SEO</li>
+                    </ul>
+                    <h5>Adicional</h5>
+                    <ul>
+                        <li>Agregar transicion automatica de cada section</li>
+                        <li>Comprimir imagenes para no comprometer velocidade de carga</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modificacion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Cambio/Añadido</h5>
+                    <ul>
+                        <li> 5 Años de experiencia no coincide con los 7 de ¿Quienes Somos?</li>
+                        <li>Cambiar los numeros fijos por cantidades indicadores reprentativo "Abstracto"</li>
+                        <li>Añadir "," en los miles para efectuar efecto de "suma"</li>
+                    </ul>
+                    <h5>Adicional</h5>
+                    <ul>
+                        <li>Imagenes de la empresa</li>
+                        <li>cambiar iconos por iconos que representen a la empresa</li>
+                        <li>Comprimir imagenes para no comprometer velocidade de carga</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+        <i class="bi bi-chevron-double-up"></i>
+    </button>
+    
+    <script>
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        mybutton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
